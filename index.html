@@ -1,7 +1,7 @@
 
 <!doctype html>
 <meta charset=utf-8>
-<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name=apple-mobile-web-app-capable content=yes>
 <meta name=apple-mobile-web-app-status-bar-style content=black>
 <title>phosphorus</title>
@@ -70,11 +70,11 @@
   function layout() {
     if (!stage) return;
     var w = Math.min(window.innerWidth, window.innerHeight / .5625);
-    if (!fullScreen) w = Math.min(w, 480);
+    if (!fullScreen) w = Math.min(w, 1280);
     var h = w * .5625;
     player.style.left = (window.innerWidth - w) / 2 + 'px';
     player.style.top = (window.innerHeight - h) / 2 + 'px';
-    stage.setZoom(w / 480);
+    stage.setZoom(w / 1280);
     stage.draw();
   }
 
